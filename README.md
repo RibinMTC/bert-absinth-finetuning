@@ -22,13 +22,13 @@ The following example fine-tunes multilingual BERT on [Absinth Hallucination Det
   ```bash
     pip3 install requirements.txt
     ```
-  - By default, the Absinth dataset does not contain the source articles, therefore perform the following steps to add the source articles as an additional column to the dataset:
-    - Download the source articles from [here](https://drive.google.com/file/d/1taGM6qToFDB37RjU5BjlYtiup_CYpvXZ/view), unzip and place it in the [data](./data) folder. 
-    - Run the following script to merge the source articles and save the dataset locally:
-      ```bash
-      python add_source_articles_and_save_locally.py
-      ```
-      This will store the dataset locally in [data](./data).
+- By default, the Absinth dataset does not contain the source articles, therefore perform the following steps to add the source articles as an additional column to the dataset:
+  - Download the source articles from [here](https://drive.google.com/file/d/1taGM6qToFDB37RjU5BjlYtiup_CYpvXZ/view), unzip the file and place `absinth_source_articles.json` in the [data](./data) folder. 
+  - Run the following script to merge the source articles and save the dataset locally:
+    ```bash
+    python add_source_articles_and_save_locally.py
+    ```
+    This will store the dataset locally in the [data](./data) folder.
 
 - We can now finetune BERT on the Absinth dataset: 
   - The `text_column_name` contain the column name of the article followed by the column name of the summary sentence. 
